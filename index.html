@@ -34,15 +34,22 @@
             <img src="laika.jpg" 
                  alt="Laika - The First Soul" 
                  class="w-64 h-64 md:w-96 md:h-96 rounded-full border-[12px] border-red-900/40 object-cover red-glow grayscale-[20%] hover:grayscale-0 transition-all duration-700">
-            <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-red-600 text-white soviet-font px-8 py-3 text-xs tracking-widest shadow-2xl">SOLANA MISSION</div>
         </div>
         
         <h1 class="soviet-font text-5xl md:text-9xl text-white mb-6 uppercase leading-none tracking-tighter">
             SOVIET <span class="text-red-600">MOON</span> DOG
         </h1>
-        <p class="max-w-3xl text-gray-400 text-lg md:text-2xl italic mb-12 font-light leading-relaxed">
+        <p class="max-w-3xl text-gray-400 text-lg md:text-2xl italic mb-8 font-light leading-relaxed">
             "The story didn't end in orbit. The first soul on the moon was a hero from the streets of Moscow."
         </p>
+
+        <div class="w-full max-w-2xl mb-12 bg-red-950/20 border border-red-600/30 p-4 rounded-sm">
+            <p class="text-[10px] soviet-font text-red-600 mb-2 tracking-widest uppercase">Contract Address</p>
+            <div class="bg-black/50 p-3 border border-red-900/50 flex flex-col md:flex-row items-center justify-between gap-4">
+                <code class="text-xs md:text-sm text-gray-300 break-all">YOUR_CONTRACT_ADDRESS_HERE</code>
+                <button onclick="navigator.clipboard.writeText('YOUR_CONTRACT_ADDRESS_HERE')" class="text-[10px] font-bold bg-red-600 text-white px-4 py-2 hover:bg-red-500 transition">COPY</button>
+            </div>
+        </div>
         
         <div class="flex flex-col md:flex-row gap-6 w-full max-w-md">
             <button class="bg-red-700 hover:bg-red-600 text-white px-12 py-5 soviet-font text-xl transition-all hover:scale-105 red-glow active:scale-95">
