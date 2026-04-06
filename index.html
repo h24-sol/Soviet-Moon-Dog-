@@ -39,15 +39,15 @@
         <h1 class="soviet-font text-5xl md:text-9xl text-white mb-6 uppercase leading-none tracking-tighter">
             SOVIET <span class="text-red-600">MOON</span> DOG
         </h1>
-        <p class="max-w-3xl text-gray-400 text-lg md:text-2xl italic mb-8 font-light leading-relaxed">
+        <p class="max-w-3xl text-gray-400 text-lg md:text-2xl italic mb-10 font-light leading-relaxed">
             "The story didn't end in orbit. The first soul on the moon was a hero from the streets of Moscow."
         </p>
 
         <div class="w-full max-w-2xl mb-12 bg-red-950/20 border border-red-600/30 p-4 rounded-sm">
             <p class="text-[10px] soviet-font text-red-600 mb-2 tracking-widest uppercase">Contract Address</p>
             <div class="bg-black/50 p-3 border border-red-900/50 flex flex-col md:flex-row items-center justify-between gap-4">
-                <code class="text-xs md:text-sm text-gray-300 break-all">YOUR_CONTRACT_ADDRESS_HERE</code>
-                <button onclick="navigator.clipboard.writeText('YOUR_CONTRACT_ADDRESS_HERE')" class="text-[10px] font-bold bg-red-600 text-white px-4 py-2 hover:bg-red-500 transition">COPY</button>
+                <code id="ca-text" class="text-xs md:text-sm text-gray-300 break-all">YOUR_CONTRACT_ADDRESS_HERE</code>
+                <button onclick="copyCA()" id="copy-btn" class="text-[10px] font-bold bg-red-600 text-white px-6 py-2 hover:bg-red-500 transition uppercase">COPY</button>
             </div>
         </div>
         
@@ -122,12 +122,27 @@
     <footer class="py-24 text-center">
         <div class="soviet-font text-red-900 text-3xl mb-8 opacity-40 hover:opacity-100 transition cursor-default">SOVIET MOON DOG</div>
         <div class="flex justify-center space-x-12 mb-12 text-gray-500 font-bold tracking-[0.3em] text-xs">
-            <a href="#" class="hover:text-red-600 transition">X / TWITTER</a>
-            <a href="#" class="hover:text-red-600 transition">TELEGRAM</a>
-            <a href="#" class="hover:text-red-600 transition">DEXSCREENER</a>
+            <a href="#" target="_blank" class="hover:text-red-600 transition">X / TWITTER</a>
+            <a href="#" target="_blank" class="hover:text-red-600 transition">TELEGRAM</a>
+            <a href="#" target="_blank" class="hover:text-red-600 transition">DEXSCREENER</a>
         </div>
         <p class="text-gray-800 text-[10px] tracking-[0.5em] uppercase">Built for the First Soul. Honoring the Mission. © 2026</p>
     </footer>
+
+    <script>
+        function copyCA() {
+            const text = document.getElementById('ca-text').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.innerText = 'COPIED!';
+                btn.style.backgroundColor = '#10b981'; // Green color
+                setTimeout(() => {
+                    btn.innerText = 'COPY';
+                    btn.style.backgroundColor = '#dc2626'; // Original red
+                }, 2000);
+            });
+        }
+    </script>
 
 </body>
 </html>
