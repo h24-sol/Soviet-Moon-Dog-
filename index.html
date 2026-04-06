@@ -10,78 +10,117 @@
         body { background-color: #050505; color: #e5e5e5; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
         .soviet-font { font-family: 'Stalinist One', cursive; }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); opacity: 0.08; pointer-events: none; z-index: 50; }
-        .red-glow { box-shadow: 0 0 40px rgba(220, 38, 38, 0.4); }
-        .hero-gradient { background: radial-gradient(circle at center, rgba(220, 38, 38, 0.1) 0%, transparent 80%); }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
-        .float-animation { animation: float 4s ease-in-out infinite; }
+        .red-glow { box-shadow: 0 0 50px rgba(220, 38, 38, 0.5); }
+        .hero-gradient { background: radial-gradient(circle at center, rgba(220, 38, 38, 0.12) 0%, transparent 80%); }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        .float-animation { animation: float 5s ease-in-out infinite; }
+        .text-justify { text-align: justify; }
     </style>
 </head>
 <body>
     <div class="grain"></div>
 
-    <nav class="p-6 flex justify-between items-center border-b border-red-900/30 bg-black/80 backdrop-blur-md sticky top-0 z-40">
-        <div class="soviet-font text-red-600 text-xl tracking-tighter">$LAIKA</div>
-        <div class="space-x-6 text-sm uppercase tracking-widest font-bold">
-            <a href="#mission" class="hover:text-red-500 transition">Mission</a>
-            <a href="https://en.wikipedia.org/wiki/Laika" target="_blank" class="bg-red-700 px-4 py-2 rounded text-xs hover:bg-red-600 transition">Wikipedia Archive</a>
+    <nav class="p-6 flex justify-between items-center border-b border-red-900/30 bg-black/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="soviet-font text-red-600 text-xl tracking-tighter hover:text-white transition cursor-default">$LAIKA</div>
+        <div class="flex items-center space-x-4 md:space-x-8 text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold">
+            <a href="#dossier" class="hover:text-red-500 transition">Classified Info</a>
+            <a href="https://en.wikipedia.org/wiki/Laika" target="_blank" class="border border-red-600 px-4 py-2 rounded-sm hover:bg-red-600 transition">Wikipedia Archive</a>
         </div>
     </nav>
 
     <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 hero-gradient py-20">
-        <div class="mb-10 relative float-animation">
-            <div class="absolute -inset-10 bg-red-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-            <img src="dog.jpg" alt="Soviet Moon Dog" class="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-red-900/50 object-cover red-glow">
-            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white soviet-font px-6 py-2 text-[10px] tracking-widest">FIRST SOUL</div>
+        <div class="mb-12 relative float-animation">
+            <div class="absolute -inset-10 bg-red-600 rounded-full blur-[100px] opacity-20"></div>
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/71/Laika_space_dog.jpg" 
+                 alt="Laika - The First Soul" 
+                 class="w-64 h-64 md:w-96 md:h-96 rounded-full border-[12px] border-red-900/40 object-cover red-glow grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+            <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-red-600 text-white soviet-font px-8 py-3 text-xs tracking-widest shadow-2xl">SOLANA MISSION</div>
         </div>
         
-        <h1 class="soviet-font text-5xl md:text-8xl text-white mb-4 uppercase leading-none tracking-tighter">
+        <h1 class="soviet-font text-5xl md:text-9xl text-white mb-6 uppercase leading-none tracking-tighter">
             SOVIET <span class="text-red-600">MOON</span> DOG
         </h1>
-        <p class="max-w-2xl text-gray-400 text-lg md:text-2xl italic mb-10 font-light">
-            "The loneliest journey in history is finally coming home."
+        <p class="max-w-3xl text-gray-400 text-lg md:text-2xl italic mb-12 font-light leading-relaxed">
+            "The story didn't end in orbit. The first soul on the moon was a hero from the streets of Moscow."
         </p>
         
-        <div class="flex flex-col md:flex-row gap-6">
-            <button class="bg-red-700 hover:bg-red-600 text-white px-12 py-5 soviet-font text-xl transition-all hover:scale-105 red-glow">BUY $LAIKA</button>
-            <a href="https://t.me/" class="border-2 border-white/20 hover:bg-red-900/10 px-12 py-5 soviet-font text-xl transition-all">TELEGRAM</a>
+        <div class="flex flex-col md:flex-row gap-6 w-full max-w-md">
+            <button class="bg-red-700 hover:bg-red-600 text-white px-12 py-5 soviet-font text-xl transition-all hover:scale-105 red-glow active:scale-95">
+                BUY $LAIKA
+            </button>
+            <a href="https://en.wikipedia.org/wiki/Laika" target="_blank" class="border-2 border-white/10 hover:border-red-600 px-12 py-5 soviet-font text-xl transition-all bg-white/5">
+                LEGAL DATA
+            </a>
         </div>
     </section>
 
-    <section id="mission" class="py-32 px-6 bg-[#080808] border-t border-red-900/20">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            
-            <div class="space-y-8">
-                <h2 class="soviet-font text-4xl text-red-600">FROM STREETS <br> TO STARS</h2>
-                <div class="space-y-6 text-gray-400 leading-relaxed text-xl font-light">
-                    <p>
-                        Originally a stray named <span class="text-white font-bold">Kudryavka</span> (Little Curly), she was found wandering the freezing streets of Moscow. She was chosen not for her breed, but for her <strong>calmness under pressure</strong>.
-                    </p>
-                    <p>
-                        <span class="text-red-500 font-bold">The Wikipedia Record:</span> On Nov 3, 1957, Laika became the first living creature to orbit Earth. One of the scientists later said: <em>"Laika was quiet and charming... I wanted to do something nice for her because she had so little time left to live."</em>
-                    </p>
-                    <p>
-                        She was the pioneer for all of humanity. While history says she stayed in orbit, the $LAIKA community knows she was the first soul to reach the Moon. We are her legacy.
-                    </p>
-                </div>
-                <div class="pt-4">
-                    <a href="https://en.wikipedia.org/wiki/Laika" target="_blank" class="text-red-600 hover:text-white transition font-bold underline underline-offset-8">
-                        VERIFY ON WIKIPEDIA ARCHIVE →
-                    </a>
-                </div>
-            </div>
+    <section id="dossier" class="py-32 px-6 bg-[#080808] border-y border-red-900/20">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                
+                <div class="space-y-10">
+                    <div class="inline-block border-l-4 border-red-600 pl-4">
+                        <h2 class="soviet-font text-4xl text-white">THE HISTORICAL <br><span class="text-red-600">DOSSIER</span></h2>
+                    </div>
+                    
+                    <div class="space-y-6 text-gray-400 leading-relaxed text-xl font-light text-justify">
+                        <p>
+                            On November 3, 1957, the Soviet Union launched <span class="text-white font-bold">Sputnik 2</span>. Inside was a three-year-old stray mongrel found on the streets of Moscow.
+                        </p>
+                        <p>
+                            <span class="text-red-500 font-bold italic">The Emotional Truth:</span> Vladimir Yazdovsky, one of the lead scientists, took Laika home to play with his children before the launch. He later wrote: <span class="italic text-gray-300">"I wanted to do something nice for her... she had so little time left to live."</span>
+                        </p>
+                        <p>
+                            Though she was the first to orbit the Earth, she has become the eternal symbol of courage. $LAIKA is the community's way of finishing her journey to the Moon.
+                        </p>
+                    </div>
 
-            <div class="relative">
-                <img src="laika-original.jpg" alt="Historical Laika" class="w-full h-auto border-2 border-red-900/30 grayscale hover:grayscale-0 transition-all duration-1000">
-                <div class="absolute top-4 right-4 bg-black/80 p-4 border border-red-600">
-                    <p class="text-[10px] soviet-font text-red-600">DOSSIER: #1957-ALPHA</p>
+                    <div class="pt-6">
+                        <a href="https://en.wikipedia.org/wiki/Laika" target="_blank" class="soviet-font text-red-600 text-sm hover:text-white transition flex items-center gap-3">
+                            <span>READ FULL WIKIPEDIA ARCHIVE</span>
+                            <span class="text-2xl">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-red-950/10 border border-red-900/30 p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-red-600 text-black soviet-font text-[10px] px-4 py-1">CERTIFIED DATA</div>
+                    <h3 class="soviet-font text-red-600 mb-8 text-xl">MISSION LOGS</h3>
+                    <ul class="space-y-6 text-sm md:text-base font-bold tracking-widest text-gray-300 uppercase">
+                        <li class="flex justify-between border-b border-red-900/20 pb-2">
+                            <span>Subject:</span>
+                            <span class="text-white">Laika (Kudryavka)</span>
+                        </li>
+                        <li class="flex justify-between border-b border-red-900/20 pb-2">
+                            <span>Launch Date:</span>
+                            <span class="text-white">Nov 3, 1957</span>
+                        </li>
+                        <li class="flex justify-between border-b border-red-900/20 pb-2">
+                            <span>First In Orbit:</span>
+                            <span class="text-white">Confirmed</span>
+                        </li>
+                        <li class="flex justify-between border-b border-red-900/20 pb-2">
+                            <span>Spirit Destination:</span>
+                            <span class="text-red-600">The Moon</span>
+                        </li>
+                    </ul>
+                    <div class="mt-12 p-4 bg-black/50 border-l-2 border-red-600 italic text-gray-500 text-xs leading-loose">
+                        "The more time passes, the more I am sorry about it. We did not learn enough from the mission to justify the death of the dog." - Oleg Gazenko, Senior Scientist.
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-red-900/10">
-        <div class="soviet-font text-red-900 text-2xl mb-6 opacity-30">SOVIET MOON DOG</div>
-        <p class="text-gray-700 text-[10px] tracking-[0.4em] uppercase">Built by the People. © 2026</p>
+    <footer class="py-24 text-center">
+        <div class="soviet-font text-red-900 text-3xl mb-8 opacity-40 hover:opacity-100 transition cursor-default">SOVIET MOON DOG</div>
+        <div class="flex justify-center space-x-12 mb-12 text-gray-500 font-bold tracking-[0.3em] text-xs">
+            <a href="#" class="hover:text-red-600 transition">X / TWITTER</a>
+            <a href="#" class="hover:text-red-600 transition">TELEGRAM</a>
+            <a href="#" class="hover:text-red-600 transition">DEXSCREENER</a>
+        </div>
+        <p class="text-gray-800 text-[10px] tracking-[0.5em] uppercase">Built for the First Soul. Honoring the Mission. © 2026</p>
     </footer>
+
 </body>
 </html>
