@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soviet Moon Dog | $LAIKA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Stalinist+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            color: #e5e5e5;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        .soviet-font { font-family: 'Stalinist One', cursive; }
+        .grain {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.08; pointer-events: none; z-index: 50;
+        }
+        .red-glow { box-shadow: 0 0 40px rgba(220, 38, 38, 0.4); }
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(220, 38, 38, 0.1) 0%, transparent 80%);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <nav class="p-6 flex justify-between items-center border-b border-red-900/30 bg-black/50 backdrop-blur-md sticky top-0 z-40">
+        <div class="soviet-font text-red-600 text-xl tracking-tighter">$LAIKA</div>
+        <div class="space-x-6 text-sm uppercase tracking-widest font-bold">
+            <a href="#story" class="hover:text-red-500 transition">The History</a>
+            <a href="https://en.wikipedia.org/wiki/Laika" target="_blank" class="hover:text-red-500 transition border-b-2 border-red-600 pb-1">Archive 01</a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 hero-gradient py-20">
+        
+        <div class="mb-10 relative float-animation">
+            <div class="absolute -inset-10 bg-red-600 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+            <img src="https://img.freepik.com/premium-photo/soviet-space-dog-laika-wearing-space-helmet-with-red-star-vintage-poster-style_1020467-1524.jpg" 
+                 alt="Soviet Moon Dog Logo" 
+                 class="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-red-900/50 object-cover red-glow grayscale-50 hover:grayscale-0 transition-all duration-500">
+            <div class="absolute bottom-0 right-0 bg-red-600 text-white soviet-font px-4 py-2 text-xs">SOVIET-01</div>
+        </div>
+        
+        <h1 class="soviet-font text-5xl md:text-8xl text-white mb-4 uppercase leading-none tracking-tighter">
+            SOVIET <span class="text-red-600">MOON</span> DOG
+        </h1>
+        <p class="max-w-2xl text-gray-400 text-lg md:text-2xl italic mb-10 font-light">
+            "The first soul to touch the lunar surface. The mission man was too afraid to finish."
+        </p>
+        
+        <div class="flex flex-col md:flex-row gap-6">
+            <button class="bg-red-700 hover:bg-red-600 text-white px-12 py-5 soviet-font text-xl transition-all hover:scale-105 active:scale-95 red-glow">
+                ACQUIRE $LAIKA
+            </button>
+            <a href="https://en.wikipedia.org/wiki/Laika" target="_blank" class="border-2 border-white/20 hover:border-red-600/50 hover:bg-red-900/10 px-12 py-5 soviet-font text-xl transition-all">
+                WIKIPEDIA DATA
+            </a>
+        </div>
+    </section>
+
+    <section id="story" class="py-32 px-6 bg-[#080808] border-t border-red-900/20">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            
+            <div class="order-2 md:order-1">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/13778162772683967200_0" 
+                     alt="Original Laika Photo" 
+                     class="w-full h-auto border-2 border-red-900/30 rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
+                <p class="text-[10px] uppercase tracking-widest text-red-900 mt-4 font-bold soviet-font">Classified Photo: November 1957</p>
+            </div>
+
+            <div class="order-1 md:order-2 space-y-8">
+                <h2 class="soviet-font text-4xl text-red-600 underline decoration-red-900 underline-offset-8 decoration-4">HER SACRIFICE</h2>
+                <div class="space-y-6 text-gray-400 leading-relaxed text-xl font-light">
+                    <p>
+                        In the cold winter of 1957, a hero was born on the streets of Moscow. Her name was <span class="text-white font-bold">Laika</span>.
+                    </p>
+                    <p>
+                        While history books say her journey ended in orbit, we believe in the <span class="text-red-500 underline underline-offset-4 decoration-1">Legacy of the First Soul</span>. 
+                    </p>
+                    <p>
+                        $LAIKA was created to complete the mission. We are taking the spirit of the bravest pioneer in history to the one place man could never keep her from: **The Moon.**
+                    </p>
+                </div>
+                <div class="pt-8 flex items-center gap-4">
+                    <div class="h-[2px] w-20 bg-red-600"></div>
+                    <span class="soviet-font text-red-600 tracking-widest">MISSION: SUCCESS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-red-900/10">
+        <div class="soviet-font text-red-900 text-2xl mb-6 opacity-30">SOVIET MOON DOG</div>
+        <div class="flex justify-center space-x-8 mb-10 text-gray-500 font-bold tracking-widest text-sm">
+            <a href="#" class="hover:text-red-600">TWITTER / X</a>
+            <a href="#" class="hover:text-red-600">TELEGRAM</a>
+            <a href="#" class="hover:text-red-600">DEXTOOLS</a>
+        </div>
+        <p class="text-gray-700 text-[10px] tracking-[0.4em] uppercase">Built in the Village. Designed for the Stars. © 2026</p>
+    </footer>
+
+</body>
+</html>
